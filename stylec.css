@@ -1,0 +1,199 @@
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  display: inline-block;
+  text-decoration: none;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  border: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  line-height: 1.3;
+}
+/* End CSS Reset */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #3a0519;
+  min-height: 100vh;
+  width: 100%;
+  color: #000;
+}
+
+form {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  height: auto;
+  width: 100%;
+
+  #input {
+    padding: 2rem 5rem;
+    border-radius: 1rem;
+    font-size: 2rem;
+    text-align: center;
+    font-weight: bold;
+    border: none;
+    outline: none;
+  }
+
+  .button-and-span {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+
+    #button {
+      background-color: #ffc107;
+      font-size: 2rem;
+      border-radius: 1rem;
+      padding: 2rem 3rem;
+      font-weight: bold;
+      z-index: 1;
+    }
+
+    .waring_btn {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%) scaleY(0.2);
+      background-color: #c91205;
+      border-radius: 0 0 1rem 1rem;
+      color: #fff;
+      padding: 5rem 0 1rem 0;
+      transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+      opacity: 0;
+      z-index: -1;
+      font-weight: bold;
+      font-size: 2rem;
+      width: 100%;
+    }
+
+    .showTheMassage {
+      transform: translateX(-50%) translateY(60px) scaleY(1);
+      opacity: 1;
+    }
+  }
+}
+
+.data-content {
+  width: 25rem;
+  background-color: #d4c9be;
+  border-radius: 1rem;
+  overflow: hidden;
+  margin-top: 8.5rem;
+
+  .container-img-pio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    #avatar_url {
+      width: 6rem;
+      height: 6rem;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-top: 2rem;
+      border: black solid 0.2rem;
+    }
+
+    p {
+      font-size: 1.8rem;
+      font-family: "Cairo Play", sans-serif;
+      font-weight: bold;
+      margin-top: 2rem;
+      text-align: center;
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+  }
+
+  .container-of-info {
+    margin-top: 2.5rem;
+
+    .info {
+      overflow: hidden;
+      width: 100%;
+      margin-bottom: 1.5rem;
+    }
+
+    .slider {
+      display: flex;
+      width: 200%;
+      transition: transform ease-in-out 1s;
+    }
+
+    p {
+      width: 52%;
+      flex-shrink: 0;
+      font-weight: bold;
+      background-color: #94b4c1;
+      padding: 1.5rem 0 1.5rem 1.2rem;
+    }
+    span {
+      width: 48%;
+      flex-shrink: 0;
+      font-weight: bold;
+      color: #fff;
+      background-color: #066782;
+      padding: 1.5rem 0 1.5rem 1.2rem;
+    }
+
+    .info:hover .slider {
+      transform: translateX(-25rem);
+    }
+    /* 
+    .info:last-child .slider {
+      margin-bottom: 0;
+    } */
+  }
+}
+
+@media (max-width: 600px) {
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    padding: 0 5rem;
+    #input {
+      padding: 2rem 0;
+      width: 100%;
+    }
+
+    #button {
+      width: 100%;
+    }
+  }
+}
